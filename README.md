@@ -11,11 +11,15 @@ Steps:
 1. Data Pre-processing: Data is imbalanced, used under-sampling technique.
 2. Balancing the Data: Created a new dataset with a uniform distribution, combining the 492 fraudulent transactions with a random sample of 492 normal transactions.
 3. Model Selection: Used Logistic Regression, as it is well-suited for binary classification problems.
+
+
 Results and Performance
 Accuracy metrics achieved by the model:
 • Training Data Accuracy: Approximately 94%.
 • Test Data Accuracy: Approximately 92.9% (nearly 93%).
 • The similarity between training and test accuracy suggests the model is not overfitted.
+
+
 Required Libraries
 The Python libraries used in the project:
 • numpy
