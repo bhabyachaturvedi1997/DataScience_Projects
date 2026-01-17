@@ -1,1 +1,24 @@
-
+Specific technical breakdown of the model based on the work completed in Potato_Part_1:
+Model Architecture & Technical Specifications
+The project utilizes a custom CNN architecture optimized for image classification. The model is designed to process leaf images and output a probability distribution across three categories: Early Blight, Late Blight, and Healthy.
+1. Preprocessing & Augmentation Layers
+Before the images reach the convolutional layers, they pass through a built-in preprocessing pipeline:
+• Resizing: All input images are standardized to 256x256 pixels.
+• Rescaling: Pixel values are normalized from the 0-255 range to 0-1 by dividing by 255.
+• Data Augmentation: To improve model robustness and prevent overfitting, the pipeline includes Random Flip (horizontal and vertical) and Random Rotation.
+2. Core CNN Layers
+The model architecture consists of a stack of Convolutional and Pooling layers, determined through trial and error to maximize accuracy:
+• Convolutional Layers (Conv2D): Used to detect edges and features using 32 to 64 filters with a 3x3 kernel size.
+• Activation Function: All hidden layers use the ReLU (Rectified Linear Unit) activation function for fast computation.
+• Pooling Layers (MaxPooling2D): Implemented with a 2x2 pool size to reduce image dimensions while preserving essential features.
+3. Classification (Dense) Layers
+• Flatten Layer: Converts the 2D feature maps into a 1D array of neurons.
+• Dense Layer: A fully connected layer with 64 neurons.
+• Output Layer: A final dense layer with 3 neurons (one for each class).
+• Activation: Uses Softmax to normalize the output into probabilities.
+Training Configuration
+• Optimizer: Adam optimizer for efficient gradient descent.
+• Metrics: Accuracy was tracked as the primary performance metric.
+• Batch Size: 32 images per batch.
+• Epochs: The model was trained for 50 epochs, though peak accuracy was observed around epoch 30-40.
+• Final Accuracy: Achieved 96% accuracy on the unseen test dataset
