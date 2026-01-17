@@ -1,0 +1,17 @@
+"In Progress."
+• Project Objective: Building an end-to-end solution to help farmers detect Early Blight and Late Blight to prevent economic loss.
+• Current Progress:
+    ◦ Data Collection: Utilized the PlantVillage dataset from Kaggle , focusing on three classes: Early Blight, Late Blight, and Healthy.
+	Kaggle link : "https://www.kaggle.com/datasets/arjuntejaswi/plant-village"
+    ◦ Data Pipeline: Implemented an efficient tf.data.Dataset input pipeline with caching and prefetching to optimize GPU/CPU usage.
+    ◦ Preprocessing & Augmentation: Built layers for resizing (256x256), rescaling, and Data Augmentation (horizontal/vertical flips and rotations) to prevent overfitting.
+    ◦ Model Architecture: Developed a Convolutional Neural Network (CNN) using 6 layers of Conv2D and MaxPooling, followed by a Flatten and Dense layer with Softmax activation.
+• Results: Achieved 96% accuracy on the test set after 50 epochs.
+
+
+
+Future Roadmap
+
+1. Backend Development: Build a FastAPI server to serve model predictions.
+2. Model Optimization: Convert the model to TF Lite using quantization for mobile deployment.
+3. Frontend/Mobile: Develop a React Native mobile app for real-time farmer use and deploy to Google Cloud Platform.
