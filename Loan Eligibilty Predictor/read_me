@@ -1,0 +1,7 @@
+● Loan Eligibility Prediction – Banking Domain [Python | Scikit-Learn | Random Forest]
+● Built a classification model to automate the loan eligibility process based on customer details (Income, Education, Credit History).
+● Performed extensive Exploratory Data Analysis (EDA) to handle missing values and identify key factors influencing loan approval.
+● Implemented Random Forest Classifier, achieving an accuracy of 78%, significantly reducing manual verification time for loan officers.
+ 
+
+
